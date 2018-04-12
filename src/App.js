@@ -8,8 +8,19 @@ import Switch from "react-router-dom/es/Switch";
 import Route from "react-router-dom/es/Route";
 import Redirect from "react-router-dom/es/Redirect";
 import BrowserRouter from "react-router-dom/es/BrowserRouter";
+import { withAuthenticator } from 'aws-amplify-react';
+import Amplify, { Analytics } from 'aws-amplify';
+import aws_exports from './aws-exports';
+
+Amplify.configure(aws_exports);
+Analytics.record('myCustomEvent');
+
 
 class App extends Component {
+
+  componentDidMount() {
+    Analytics.record('FIRST-EVENT-NAME');
+ }
   render() {
     return (
       <BrowserRouter>
@@ -37,7 +48,7 @@ class PaypalError extends Component {
   }
 }
 
-export default App;
+export default withAuthenticator(App);
 
 class Item extends Component {
   styles = {

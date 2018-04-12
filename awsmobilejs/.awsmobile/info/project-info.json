@@ -1,0 +1,19 @@
+{
+	"ProjectName": "frontend",
+	"ProjectPath": "D:\\Maestria\\Comercio Electronico\\frontend",
+	"InitializationTime": "",
+	"LastConfigurationTime": "2018-04-11-19-38-03",
+	"LastNPMInstallTime": "",
+	"FrontendLastBuildTime": "2018-04-11-20-44-03",
+	"LastPublishTime": "2018-04-11-20-44-06",
+	"BackendLastSyncTime": "2018-04-11-20-43-42",
+	"BackendLastBuildTime": "2018-04-11-20-43-35",
+	"BackendLastPushTime": "2018-04-11-20-43-38",
+	"BackendLastPushSuccessful": true,
+	"BackendProjectID": "89f3eb6f-108d-4da1-bc04-05343f893028",
+	"BackendProjectName": "La-reposteria-GDL",
+	"BackendProjectConsoleUrl": "https://console.aws.amazon.com/mobilehub/home#/89f3eb6f-108d-4da1-bc04-05343f893028/build",
+	"BackendProjectCreationTime": "2018-04-12T00:26:55.646Z",
+	"BackendProjectLastUpdatedTime": "2018-04-12T01:43:35.152Z",
+	"Framework": "react"
+}

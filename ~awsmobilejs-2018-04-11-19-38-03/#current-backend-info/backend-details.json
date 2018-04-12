@@ -1,0 +1,106 @@
+{
+	"name": "La-reposteria-GDL",
+	"projectId": "89f3eb6f-108d-4da1-bc04-05343f893028",
+	"region": "us-east-1",
+	"state": "NORMAL",
+	"createdDate": "2018-04-12T00:26:55.646Z",
+	"lastUpdatedDate": "2018-04-12T00:29:59.643Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/89f3eb6f-108d-4da1-bc04-05343f893028/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "lareposteriagdl_MobileHub",
+			"arn": "29c0a18ea57b4bd9b6b0436d55ddd9a9",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "346dad33-3de8-11e8-b772-fbe3e5653ebd"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "lareposteriagdl_mobileanalytics_MOBILEHUB_180347528",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "346dad33-3de8-11e8-b772-fbe3e5653ebd",
+				"role": "lareposteriagdl_unauth_MOBILEHUB_180347528"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "lareposteriagdl_MOBILEHUB_180347528",
+			"arn": "us-east-1:75a0fe37-41d8-4d1e-aea1-13fe2818309e",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "346dad33-3de8-11e8-b772-fbe3e5653ebd",
+				"poolid": "us-east-1:75a0fe37-41d8-4d1e-aea1-13fe2818309e",
+				"roleARNs": "arn:aws:iam::186488672987:role/lareposteriagdl_unauth_MOBILEHUB_180347528"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "lareposteriagdl_unauth_MOBILEHUB_180347528",
+			"arn": "arn:aws:iam::186488672987:role/lareposteriagdl_unauth_MOBILEHUB_180347528",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "346dad33-3de8-11e8-b772-fbe3e5653ebd"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "lareposteriagdl-hosting-mobilehub-180347528",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "a0b8c2f2-3de8-11e8-b772-fbe3e5653ebd",
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/lareposteriagdl-hosting-mobilehub-180347528",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/lareposteriagdl-hosting-mobilehub-180347528"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d2wdmssw6mmujk.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E2714RZXM419I1",
+				"lastUpdateRequestID": "a0b8c2f2-3de8-11e8-b772-fbe3e5653ebd"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "lareposteriagdl_hosting_MOBILEHUB_180347528",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "a0b8c2f2-3de8-11e8-b772-fbe3e5653ebd",
+				"role": "lareposteriagdl_unauth_MOBILEHUB_180347528"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "lareposteriagdl-deployments-mobilehub-180347528",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-1",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/lareposteriagdl-deployments-mobilehub-180347528"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-east-1",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}
