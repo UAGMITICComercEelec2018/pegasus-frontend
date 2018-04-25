@@ -20,7 +20,7 @@ class App extends Component {
 
   componentDidMount() {
     Analytics.record('FIRST-EVENT-NAME');
- }
+  }
   render() {
     return (
       <BrowserRouter>
@@ -136,7 +136,7 @@ class Item extends Component {
   };
   products = [
     {
-      id: "1",
+      id: "item1",
       title: "Pastel de zanahoria",
       description:
         "¿Quién habría adivinado que una piña, compota de manzana y zanahorias podrían ser parte de un postre tan sabroso?",
@@ -146,7 +146,7 @@ class Item extends Component {
       shipping: "No shipping"
     },
     {
-      id: "2",
+      id: "item2",
       title: "Torta Rellena Cremosa",
       description:
         "¡La combinación perfecta del dulce en un pastel esponjoso y sabroso!",
@@ -156,7 +156,7 @@ class Item extends Component {
       shipping: "No shipping"
     },
     {
-      id: "3",
+      id: "item3",
       title: "Cheesecake de caramelo",
       description: "Cheesecake con un toque dulce y fácil de hacer",
       price: 280.0,
@@ -165,38 +165,68 @@ class Item extends Component {
       shipping: "No shipping"
     },
     {
-      id: "producto1",
-      title: "Camisa 1",
-      description: "Descripción",
+      id: "item4",
+      title: "Cheesecake de fresa",
+      description: "Hecho con fresas naturales, simplemente irresistible.",
       price: 100.0,
       image:
-        "https://vangogh.teespring.com/v3/image/oGRwVyoQlFfX-UDpYHwSIjMuDa0/480/560.jpg",
+        "http://www.lareposteriagdl.com/wp-content/uploads/2018/04/Cheesecake-fresa.jpg",
       shipping: "No shipping"
     },
     {
-      id: "producto2",
-      title: "Camisa 2",
-      description: "Descripción",
-      price: 100.0,
+      id: "item5",
+      title: "Cupcake de fresa con vainilla",
+      description: "Un cupcake perfecto para regalarlo en una ocación especial",
+      price: 30.0,
       image:
-        "https://vangogh.teespring.com/v3/image/oGRwVyoQlFfX-UDpYHwSIjMuDa0/480/560.jpg",
+        "http://www.lareposteriagdl.com/wp-content/uploads/2018/04/Cupcake-con-vainilla.jpeg",
       shipping: "No shipping"
     },
     {
-      id: "cat",
-      title: "My Cat Can Live A Better Life Shirt",
+      id: "item6",
+      title: "Muffin con de vainilla con nuez",
       description:
-        "I Work Hard So My Cat Can Live A Better Life Shirt, Funny Cat Shirt",
-      price: 100.0,
+        "Una convinación que no podrás dejar comer",
+      price: 30.0,
       image:
-        "https://vangogh.teespring.com/v3/image/oGRwVyoQlFfX-UDpYHwSIjMuDa0/480/560.jpg",
-      shipping: `Orders are printed and shipped when the time expires or earlier.
-              You can expect your package to arrive 10 - 13 business days after
-              the product prints. Expedited or Rush shipping may be available
-              depending upon the product(s) selected and the destination
-              country. Shipping costs start at: $3.99 for the first apparel item
-              and $2.00 for each additional apparel item. Products are fulfilled
-              in the US`
+        "https://i.ytimg.com/vi/zJpV7PvgqNc/hqdefault.jpg",
+      shipping: "No shipping"
+    },
+    {
+      id: "item7",
+      title: "Cupcake de vainilla",
+      description: "El favorito de todos",
+      price: 25.0,
+      image:
+        "http://www.lareposteriagdl.com/wp-content/uploads/2018/04/Cupcakes-vainilla.jpg",
+      shipping: "No shipping"
+    },
+    {
+      id: "item8",
+      title: "Pastel de chocolate",
+      description: "Simplemente un sabor irresistible.",
+      price: 50.0,
+      image:
+        "http://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2017/10/pasteldechocolatevegano.jpg",
+      shipping: "No shipping"
+    },
+    {
+      id: "item9",
+      title: "Pay de guayaba",
+      description: "No puedes decir que no te gusta hasta que pruebes nuestros",
+      price: 60.0,
+      image:
+        "http://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2017/09/paydeguayabasinhorno.jpg",
+      shipping: "No shipping"
+    },
+    {
+      id: "item10",
+      title: "Flan napolitano",
+      description: "Un flan tradicional que no podrás dejar de comer",
+      price: 20.0,
+      image:
+        "https://i.ytimg.com/vi/wA2NR3O3b1s/hqdefault.jpg",
+      shipping: "No shipping"
     }
   ];
   render() {
