@@ -213,7 +213,7 @@ class Item extends Component {
     {
       id: "item9",
       title: "Pay de guayaba",
-      description: "No puedes decir que no te gusta hasta que pruebes nuestros",
+      description: "No puedes decir que no te gusta hasta que pruebes el nuestro",
       price: 60.0,
       image:
         "http://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2017/09/paydeguayabasinhorno.jpg",
