@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import logo from "./logo.png";
+import ok from "./ok.png";
 import imgPayPal from "./paypal.svg";
 import imgOxxoPay from "./oxxopay.svg";
 import imgCard from "./methods_statement_cards.png";
@@ -8,18 +9,16 @@ import Switch from "react-router-dom/es/Switch";
 import Route from "react-router-dom/es/Route";
 import Redirect from "react-router-dom/es/Redirect";
 import BrowserRouter from "react-router-dom/es/BrowserRouter";
-import { withAuthenticator } from 'aws-amplify-react';
-import Amplify, { Analytics } from 'aws-amplify';
-import aws_exports from './aws-exports';
+import { withAuthenticator } from "aws-amplify-react";
+import Amplify, { Analytics } from "aws-amplify";
+import aws_exports from "./aws-exports";
 
 Amplify.configure(aws_exports);
-Analytics.record('myCustomEvent');
-
+Analytics.record("myCustomEvent");
 
 class App extends Component {
-
   componentDidMount() {
-    Analytics.record('FIRST-EVENT-NAME');
+    Analytics.record("FIRST-EVENT-NAME");
   }
   render() {
     return (
@@ -37,8 +36,77 @@ class App extends Component {
 }
 
 class PaypalSuccess extends Component {
+  styles = {
+    itemContainer: {
+      display: "flex",
+      justifyContent: "center",
+      paddingTop: "1rem"
+    },
+    imgItem: {
+      justifyContent: "center",
+      display: "flex",
+      paddingTop: "5rem"
+    },
+    navContainer: {
+      position: "fixed",
+      padding: "1rem",
+      display: "flex",
+      justifyContent: "space-between",
+      alignItems: "center",
+      height: "1rem",
+      width: "100%",
+      backgroundColor: "white",
+      borderBottom: "1px solid rgba(0,0,0,.1)"
+    },
+    navLinksContainer: {
+      display: "flex",
+      paddingRight: "4rem"
+    },
+    navLink: {
+      fontFamily: "'Helvetica Neue',Helvetica,Arial,sans-serif",
+      fontWeight: "300",
+      fontSize: "1.1rem",
+      wordWrap: "break-word",
+      textDecoration: "none",
+      color: "inherit",
+      marginRight: "1rem"
+    }
+  };
   render() {
-    return <p>Hola mundo</p>;
+    const { styles } = this;
+    return (
+      <Fragment>
+        <div style={styles.navContainer}>
+          <div style={styles.navLinksContainer}>
+            <a style={styles.navLink} href="http://lareposteriagdl.com/">
+              INICIO
+            </a>
+            <a
+              style={styles.navLink}
+              href="http://lareposteriagdl.com/contact/"
+            >
+              CONTACTO
+            </a>
+            <a style={styles.navLink} href="http://lareposteriagdl.com/about/">
+              ACERCA DE
+            </a>
+          </div>
+        </div>
+        <br />
+        <div style={styles.imgItem}>
+          <img src={logo} />
+        </div>
+        <div style={styles.itemContainer}>
+          <h1>Gracias por tu compra</h1>
+        </div>
+        <div style={styles.itemContainer}>
+          <h2>Tu pago se realizo correctamente</h2>
+        </div>
+        <div style={styles.imgItem}>
+          <img src={ok} />
+        </div>
+      </Fragment>
+    );
   }
 }
 
@@ -185,11 +253,9 @@ class Item extends Component {
     {
       id: "item6",
       title: "Muffin con de vainilla con nuez",
-      description:
-        "Una convinación que no podrás dejar comer",
+      description: "Una convinación que no podrás dejar comer",
       price: 30.0,
-      image:
-        "https://i.ytimg.com/vi/zJpV7PvgqNc/hqdefault.jpg",
+      image: "https://i.ytimg.com/vi/zJpV7PvgqNc/hqdefault.jpg",
       shipping: "No shipping"
     },
     {
@@ -213,7 +279,8 @@ class Item extends Component {
     {
       id: "item9",
       title: "Pay de guayaba",
-      description: "No puedes decir que no te gusta hasta que pruebes el nuestro",
+      description:
+        "No puedes decir que no te gusta hasta que pruebes el nuestro",
       price: 60.0,
       image:
         "http://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/images/2017/09/paydeguayabasinhorno.jpg",
@@ -224,8 +291,7 @@ class Item extends Component {
       title: "Flan napolitano",
       description: "Un flan tradicional que no podrás dejar de comer",
       price: 20.0,
-      image:
-        "https://i.ytimg.com/vi/wA2NR3O3b1s/hqdefault.jpg",
+      image: "https://i.ytimg.com/vi/wA2NR3O3b1s/hqdefault.jpg",
       shipping: "No shipping"
     }
   ];
